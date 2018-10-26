@@ -14,11 +14,10 @@ import com.nelioalves.cursomc.services.DBService;
 @Profile("dev")
 public class DevConfig {
 
-	
 	@Autowired
 	private DBService dbService;
 	
-	@Value("{spring.jpa.hibernate.ddl-auto}")
+	@Value("${spring.jpa.hibernate.ddl-auto}")
 	private String strategy;
 	
 	@Bean
