@@ -48,7 +48,7 @@ public class DBService {
 	private EstadoRepository estadoRepository;
 
 	@Autowired
-	private CidadeRepository cidadesRepository;
+	private CidadeRepository cidadeRepository;
 
 	@Autowired
 	private ClienteRepository clienteRepository;
@@ -121,7 +121,7 @@ public class DBService {
 		est2.getCidades().addAll(Arrays.asList(c2, c3));
 
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
-		cidadesRepository.saveAll(Arrays.asList(c1, c2, c3));
+		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
 
 		Cliente cli1 = new Cliente(null, "Maria Silva", "thiagobarso@outlook.com", "36378912377",
 				TipoCliente.PESSOAFISICA, pe.encode("123"));
